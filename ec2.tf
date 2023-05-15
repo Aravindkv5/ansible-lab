@@ -16,7 +16,8 @@ resource "aws_instance" "myec2" {
   associate_public_ip_address = true
   subnet_id                   = aws_subnet.my_public_SN.id
   vpc_security_group_ids      = [aws_security_group.mysg.id]
-  key_name                    = "ansible"
+  key_name                    = "AK"
+  iam_instance_profile        = var.iam_instance_profile[0]
   count                       = local.values
   user_data                   = file("script.sh")
   tags = {

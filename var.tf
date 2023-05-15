@@ -22,3 +22,9 @@ variable "ingress_ports" {
   type    = list(number)
   default = [22]
 }
+
+variable "iam_instance_profile" {
+    default = ["EC2-Admin"]
+    description = "we can assign the IAM role needed to the EC2 instances"
+  
+}
