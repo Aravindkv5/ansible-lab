@@ -1,6 +1,6 @@
 variable "region" {
   type    = string
-  default = "us-east-1"
+  default = "ap-south-1"
 }
 variable "tag_name" {
   type    = list(string)
@@ -9,14 +9,14 @@ variable "tag_name" {
 variable "instance_type" {
   type = map(any)
   default = {
-    "us-east-1a" = "t2.micro"
-    "us-east-1b" = "t2.medium"
-    "us-east-1c" = "t2.large"
+    "ap-south-1a" = "t2.micro"
+    "ap-south-1b" = "t2.medium"
+    "ap-south-1c" = "t2.large"
   }
 }
 variable "az" {
   type    = list(string)
-  default = ["us-east-1a", "us-east-1b", "us-east-1c"]
+  default = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
 }
 variable "ingress_ports" {
   type    = list(number)
